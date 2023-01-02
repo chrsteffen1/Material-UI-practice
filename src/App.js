@@ -75,6 +75,10 @@ function App() {
                 label="First Name"
                 value={formData.firstName} 
                 onChange={handleChange}
+                autoComplete="off"
+                margin="normal"
+                fullWidth
+                required
             />
             <TextField
                 type="text"
@@ -82,6 +86,10 @@ function App() {
                 label="Last Name"
                 value={formData.lastName}
                 onChange={handleChange}
+                autoComplete="off"
+                margin="normal"
+                fullWidth
+                required
             />
             <TextField
                 type="text"
@@ -89,6 +97,11 @@ function App() {
                 label="Email"
                 value={formData.email}
                 onChange={handleChange}
+                autoComplete="off"
+                margin="normal"
+                fullWidth
+                required
+                
             />
             <TextField
                 type="text"
@@ -96,8 +109,13 @@ function App() {
                 label="Location"
                 value={formData.location}
                 onChange={handleChange}
+                autoComplete="off"
+                margin="normal"
+                fullWidth
+                required
+                
             />
-            <Button type="submit"> Submit </Button>
+            <Button type="submit" variant='contained' fullWidth color='secondary'> Submit </Button>
           </form>
         </Paper>
       </Box>
