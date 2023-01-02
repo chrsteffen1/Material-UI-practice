@@ -38,7 +38,11 @@ function App() {
 
   return (
     <div className="App">
-            <Box>
+      <Box
+      display="flex"
+      justifyContent='center'
+      alignItems='center'
+      sx={{width:'50%'}}>
         <Paper>
           <List>
             <ListItem>
@@ -58,39 +62,43 @@ function App() {
           </List>
         </Paper>
       </Box>
-      <Box className='box'>
-        <Paper>
-        <form onSubmit={handleSubmit}>
-      <TextField
-          type="text"
-          name="firstName"
-          label="First Name"
-          value={formData.firstName} 
-          onChange={handleChange}
-      />
-      <TextField
-          type="text"
-          name="lastName"
-          label="Last Name"
-          value={formData.lastName}
-          onChange={handleChange}
-      />
-      <TextField
-          type="text"
-          name="email"
-          label="Email"
-          value={formData.email}
-          onChange={handleChange}
-      />
-      <TextField
-          type="text"
-          name="location"
-          label="Location"
-          value={formData.location}
-          onChange={handleChange}
-      />
-      <Button type="submit"> Submit </Button>
-    </form>
+      <Box 
+      display="flex"
+      justifyContent='center'
+      alignItems='center'
+      sx={{width:'50%'}}>
+        <Paper elevation={4} sx={{ width: "100%", p: "1rem" }}>
+          <form onSubmit={handleSubmit}>
+            <TextField
+                type="text"
+                name="firstName"
+                label="First Name"
+                value={formData.firstName} 
+                onChange={handleChange}
+            />
+            <TextField
+                type="text"
+                name="lastName"
+                label="Last Name"
+                value={formData.lastName}
+                onChange={handleChange}
+            />
+            <TextField
+                type="text"
+                name="email"
+                label="Email"
+                value={formData.email}
+                onChange={handleChange}
+            />
+            <TextField
+                type="text"
+                name="location"
+                label="Location"
+                value={formData.location}
+                onChange={handleChange}
+            />
+            <Button type="submit"> Submit </Button>
+          </form>
         </Paper>
       </Box>
     </div>
