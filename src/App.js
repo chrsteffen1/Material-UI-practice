@@ -19,37 +19,49 @@ function App() {
     location: ''
   })
 
+  const handleChange = event => {
+    setFormData({ ...formData, [event.target.name]: event.target.value })
+  }
+
   return (
     <div className="App">
-      <Box>
+      <Box className='box'>
         <Paper>
-          <form>
-            <TextField
-              type="text"
-              name="firstName"
-              label="First Name"
-              value={formData.firstName}
-            />
-            <TextField
-              type="text"
-              name="lastName"
-              label="Last Name"
-              value={formData.lastName}
-            />
-            <TextField
-              type="text"
-              name="email"
-              label="Email"
-              value={formData.email}
-            />
-            <TextField
-              type="text"
-              name="location"
-              label="Location"
-              value={formData.location}
-            />
-            <Button type='submit'>Submit</Button>
-          </form>
+        <form>
+      <TextField
+          type="text"
+          name="firstName"
+          label="First Name"
+          value={formData.firstName}
+          // add below: 
+          onChange={handleChange}
+      />
+      <TextField
+          type="text"
+          name="lastName"
+          label="Last Name"
+          value={formData.lastName}
+          // add below:
+          onChange={handleChange}
+      />
+      <TextField
+          type="text"
+          name="email"
+          label="Email"
+          value={formData.email}
+          // add below:
+          onChange={handleChange}
+      />
+      <TextField
+          type="text"
+          name="location"
+          label="Location"
+          value={formData.location}
+          // add below:
+          onChange={handleChange}
+      />
+      <Button type="submit"> Submit </Button>
+    </form>
         </Paper>
       </Box>
     </div>
