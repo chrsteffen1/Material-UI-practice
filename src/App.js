@@ -12,6 +12,7 @@ import PersonIcon from '@mui/icons-material/Person'
 import LocationOnIcon from '@mui/icons-material/LocationOn'
 import EmailIcon from '@mui/icons-material/Email'
 import ListItemIcon from '@mui/material/ListItemIcon'
+import Form from './Components/Form';
 
 function App() {
   const [display, setDisplay] = useState({
