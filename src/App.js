@@ -13,6 +13,7 @@ import LocationOnIcon from '@mui/icons-material/LocationOn'
 import EmailIcon from '@mui/icons-material/Email'
 import ListItemIcon from '@mui/material/ListItemIcon'
 import Form from './Components/Form';
+import Display from './Components/Display';
 
 function App() {
   const [display, setDisplay] = useState({
@@ -43,40 +44,7 @@ function App() {
 
   return (
     <div className="App">
-      <Box
-      display="flex"
-      justifyContent='center'
-      alignItems='center'
-      sx={{width:'50%'}}
-      >
-        <Paper sx={{width: '100%'}}>
-          <List>
-            <ListItem>
-              <ListItemIcon>
-                <PersonIcon/>
-              </ListItemIcon>
-              <ListItemText
-                primary={`${display.firstName} ${display.lastName}`}
-                secondary="Name"
-              />
-            </ListItem>
-            <Divider />
-            <ListItem>
-              <ListItemIcon>
-                <EmailIcon/>
-              </ListItemIcon>
-              <ListItemText primary={display.email} secondary="Email" />
-            </ListItem>
-            <Divider />
-            <ListItem>
-              <ListItemIcon>
-                <LocationOnIcon/>
-              </ListItemIcon>
-              <ListItemText primary={display.location} secondary="Location" />
-            </ListItem>
-          </List>
-        </Paper>
-      </Box>
+      <Display display={display}/>
       <Box 
       display="flex"
       justifyContent='center'
