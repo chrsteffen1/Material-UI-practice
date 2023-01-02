@@ -46,7 +46,8 @@ function App() {
       display="flex"
       justifyContent='center'
       alignItems='center'
-      sx={{width:'50%'}}>
+      sx={{width:'50%'}}
+      >
         <Paper sx={{width: '100%'}}>
           <List>
             <ListItem>
@@ -79,7 +80,7 @@ function App() {
       display="flex"
       justifyContent='center'
       alignItems='center'
-      sx={{width:'50%'}}>
+      sx={{width:'50%', mt: '2rem'}}>
         <Paper elevation={4} sx={{ width: "100%", p: "1rem" }}>
           <form onSubmit={handleSubmit}>
             <TextField
