@@ -8,6 +8,12 @@ function App() {
     email: 'randomname@generalassemb.ly',
     location: 'Seattle',
   })
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    location: ''
+  })
 
   return (
     <div className="App">
